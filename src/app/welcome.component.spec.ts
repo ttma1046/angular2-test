@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By }              from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { WelcomeComponent } from './welcome.component';
-import { UserService } from './model';
+import { UserService } from './model/user.service';
 
 describe('WelcomeComponent', () => {
 
@@ -12,8 +12,12 @@ describe('WelcomeComponent', () => {
   let de: DebugElement;
   let el: HTMLElement;
 
-  let userServiceStub: any;
-  let userService: any;
+  let userServiceStub: {
+    isLoggedIn: boolean;
+    user: { name: string }
+  };
+
+  let userService: UserService;
 
   // async beforeEach
   beforeEach(() => {
