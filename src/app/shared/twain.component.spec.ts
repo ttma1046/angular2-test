@@ -8,12 +8,14 @@ import { TwainService } from './twain.service';
 describe('TwainComponent', () => {
   let comp: TwainComponent;
   let fixture: ComponentFixture<TwainComponent>;
+
+  let spy: jasmine.Spy;
   let de: DebugElement;
   let el: HTMLElement;
 
   let twainService: TwainService;
-  let spy: jasmine.Spy;
-  const testQuote = 'haha';
+
+  const testQuote = 'Test Quote';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
