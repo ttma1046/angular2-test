@@ -28,8 +28,8 @@ let fixture: ComponentFixture<DashboardComponent>;
 describe('DashboardComponent (deep)', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      // imports: [ DashboardModule ]
-      declarations: [ DashboardComponent, DashboardHeroComponent ]
+      imports: [ DashboardModule ]
+      // declarations: [ DashboardComponent, DashboardHeroComponent ]
     });
   });
 
