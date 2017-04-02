@@ -100,7 +100,7 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-    <dashboard-hero  [hero]="hero"  (selected)="onSelected($event)"></dashboard-hero>`
+    <dashboard-hero [hero]="hero" (selected)="onSelected($event)"></dashboard-hero>`
 })
 class TestHostComponent {
   hero = new Hero(42, 'Test Name');
