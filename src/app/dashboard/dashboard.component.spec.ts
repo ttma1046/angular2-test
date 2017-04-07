@@ -29,7 +29,6 @@ describe('DashboardComponent (deep)', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ DashboardModule ]
-      // declarations: [ DashboardComponent, DashboardHeroComponent ]
     });
   });
 
@@ -52,7 +51,7 @@ describe('DashboardComponent (shallow)', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
-      schemas:      [NO_ERRORS_SCHEMA]
+      schemas:      [ NO_ERRORS_SCHEMA ]
     });
   });
 
@@ -79,6 +78,9 @@ function compileAndCreate() {
     .compileComponents().then(() => {
       fixture = TestBed.createComponent(DashboardComponent);
       comp = fixture.componentInstance;
+
+      // UserService actually injected into the component
+      //userService = fixture.debugElement.injector.get(UserService);
     });
   }));
 }
@@ -139,8 +141,6 @@ function tests(heroClick: Function) {
     }));
   });
 }
-
-
 
 /*
 Copyright 2017 Google Inc. All Rights Reserved.
